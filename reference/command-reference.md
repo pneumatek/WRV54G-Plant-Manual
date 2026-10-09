@@ -84,16 +84,23 @@ These commands alter configuration and should not be used during initial read-on
 
 ### Flash inspection
 
-```text
-flash_layout
-flash_dump [-s <section> | -r <address>] [-l <length>] [-1|2|4]
-```
+`flash_layout`
 
 The `flash_layout` command reports the flash sections and their metadata.
 
+`flash_dump [-s <section> | -r <address>] [-l <length>] [-1|2|4]`
+
 The `flash_dump` command supports selecting a section or an address, specifying a length, and choosing a display width.
 
-**Observed behavior:** Invoking `flash_dump` without arguments displayed data beginning at address `0x00000000`. It did not print usage information. Avoid invoking it without arguments when a bounded output is intended.
+**Observed behavior — Default invocation**
+
+Invoking `flash_dump` without arguments displayed data beginning at address `0x00000000`. It did not print usage information. Avoid invoking it without arguments when a bounded output is intended.
+
+**Additional observation — Console capture interruption**
+
+During the 2026-10-09 session, the text `data_error` appeared after an attempt to copy console contents using Ctrl-C in PuTTY. The user reports that pressing Enter clears the line.
+
+The cause of this text has not been established. It must not be treated as evidence of a flash-read failure or a router fault. Future console captures should use PuTTY's mouse-selection copy behavior or the session log file, avoiding Ctrl-C as a copy shortcut.
 
 ### Flash erasure
 
