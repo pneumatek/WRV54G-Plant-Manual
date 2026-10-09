@@ -1,0 +1,41 @@
+WRV54G Plant Manual & OpenRG Atlas
+Evidence Type: Serial console transcript
+Date: 2026-10-09
+Subsystem: Flash organization
+Interface: Serial console via PuTTY
+Command: flash_layout
+Capture: Current investigation session
+Status: Transcript transcribed from console output; original PuTTY log retained separately if available.
+
+OpenRG boot> flash_layout
+Flash layout:
+
+Section 00 Type BOOT       Range 0x00000000-0x0013F000 MaxSize 0x0013F000
+        No more information.
+
+Section 01 Type FACTORY    Range 0x0013F000-0x00140000 MaxSize 0x00000F6C
+        Size 0x000001F0 Name 'rg_factory'
+        Checksum 0x0000875C Counter 0x000001D4 Start Offset 0x00000000
+
+Section 02 Type IMAGE      Range 0x00140000-0x006C0000 MaxSize 0x0057FF6C
+        Uninitialized.
+
+Section 03 Type FLASH_SECT_BOOTCONF Range 0x006C0000-0x006E0000 MaxSize 0x0001FF6C
+        Size 0x00000310 Name 'rg_conf'
+        Checksum 0x00017D8A Counter 0x000004A5 Start Offset 0x00000000
+
+Section 04 Type Unknown section type Range 0x006E0000-0x00700000 MaxSize 0x0001FF6C
+        Size 0x00000070 Name 'vendor_log'
+        Checksum 0x00003ED4 Counter 0x00000000 Start Offset 0x00000000
+
+Section 05 Type FLASH_SECT_CONF Range 0x00700000-0x00780000 MaxSize 0x0007FF6C
+        Size 0x000024FC Name 'rg_conf'
+        Checksum 0x0012F9A8 Counter 0x000004A3 Start Offset 0x00000000
+
+Section 06 Type FLASH_SECT_CONF Range 0x00780000-0x00800000 MaxSize 0x0007FF6C
+        Size 0x0000251C Name 'rg_conf'
+        Checksum 0x0012D329 Counter 0x0000049F Start Offset 0x00000000
+
+Total 7 sections found.
+Returned 0
+OpenRG boot>
