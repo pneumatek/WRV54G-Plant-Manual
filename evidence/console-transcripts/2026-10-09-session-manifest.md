@@ -11,6 +11,8 @@
 - **Original Windows path:** `D:\WRV54G-Plant-Manual-Evidence\WRV54G-2026-10-09-session-114730.log`
 - **WSL path:** `/mnt/d/WRV54G-Plant-Manual-Evidence/WRV54G-2026-10-09-session-114730.log`
 - **Reported size:** Approximately 5.2 KB
+- **Exact size:** 5,290 bytes
+- **Modification time:** 2026-10-09 12:07:15 -0500
 - **Reported modification time:** 2026-10-09 12:07, local system time
 
 ## 2. Integrity Fingerprint
