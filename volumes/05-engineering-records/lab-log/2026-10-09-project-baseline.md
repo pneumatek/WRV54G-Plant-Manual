@@ -108,6 +108,38 @@ The system's current startup failure remains unexplained. Firmware integrity and
 
 The immediate priority is preservation of evidence, followed by controlled analysis.
 
----
+## 8. Follow-up Investigation — Flash Inspection
 
+**Date:** 2026-10-09  
+**Activity:** Read-only flash inspection  
+**Commands:** `flash_layout`, `flash_dump -s 2 -l 0x200`
+
+### Evidence Captured
+
+Two console outputs were transcribed into the Evidence Archive:
+
+- `evidence/console-transcripts/2026-10-09-flash-layout.txt`
+- `evidence/console-transcripts/2026-10-09-image-region-sample.txt`
+
+The flash-layout output reports seven sections across an 8 MiB address space. Section 02, labeled `IMAGE`, occupies `0x00140000–0x006C0000` and is reported as `Uninitialized`.
+
+A 512-byte dump from section 02 begins with `FE ED BA BE`. The data also contains an embedded download-date string and executable-looking bytes.
+
+### Comparison With Earlier Observations
+
+The current flash-layout output differs from an earlier recorded output in the metadata reported for section 03. The current output also identifies section 04 as `vendor_log`, whereas the earlier output reported that section as uninitialized.
+
+The timing and origin of the earlier output have not yet been verified against an original transcript. The reason for these differences is unknown.
+
+### Interpretation
+
+The presence of nonblank data in section 02 does not, by itself, establish that the image is complete, valid, or bootable. Likewise, the `Uninitialized` label has not yet been explained.
+
+The discrepancies are retained as open investigative questions. No root cause has been established.
+
+### Next Objective
+
+Determine whether a complete raw flash backup already exists. If not, identify and verify a safe acquisition method before considering any operation that could modify persistent flash contents.
+
+---
 *This entry records the baseline established by the investigation to date. Future entries will document subsequent activities, results, and changes in understanding.*
