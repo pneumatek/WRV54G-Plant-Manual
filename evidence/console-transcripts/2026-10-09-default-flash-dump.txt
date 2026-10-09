@@ -1,0 +1,27 @@
+WRV54G Plant Manual & OpenRG Atlas  
+Evidence Type: Serial console transcript  
+Date: 2026-10-09  
+Command: `flash_dump`  
+Arguments: None  
+Observed output: Data beginning at address `0x00000000`  
+Status: Transcribed from console output; default behavior observed.
+
+OpenRG boot> flash_dump
+00000000: e1 a0 c0 00 e3 a0 00 d3  e1 21 f0 00 e3 a0 00 78  |.........!.....x|
+00000010: e3 80 00 80 ee 01 0f 10  ee 12 0f 10 e1 a0 00 00  |................|
+00000020: e2 4f f0 04 e3 a0 00 00  ee 0d 0f 10 ee 12 0f 10  |.O..............|
+00000030: e1 a0 00 00 e2 4f f0 04  ee 07 0f 17 ee 12 0f 10  |.....O..........|
+00000040: e1 a0 00 00 e2 4f f0 04  ee 07 0f 9a ee 12 0f 10  |.....O..........|
+00000050: e1 a0 00 00 e2 4f f0 04  e3 a0 00 01 ee 0f 0f 11  |.....O..........|
+00000060: ee 07 0f 9a ee 12 0f 10  e1 a0 00 00 e2 4f f0 04  |.............O..|
+00000070: e3 a0 10 08 e3 a0 23 33  e5 82 10 00 e3 a0 10 00  |......#3........|
+00000080: e5 9f 30 d8 e5 83 10 00  e3 a0 10 03 e5 9f 40 d0  |..0...........@.|
+00000090: e5 84 10 00 e3 a0 09 01  e2 50 00 01 12 4f f0 0c  |.........P...O..|
+000000a0: e5 9f 10 c0 e5 83 10 00  e3 a0 09 01 e2 50 00 01  |.............P..|
+000000b0: 12 4f f0 0c e3 a0 10 02  e5 84 10 00 e3 a0 09 01  |.O..............|
+000000c0: e2 50 00 01 12 4f f0 0c  e3 a0 10 04 e3 a0 50 08  |.P...O........P.|
+000000d0: e5 84 10 00 e3 a0 0c 01  e2 50 00 01 12 4f f0 0c  |.........P...O..|
+000000e0: e2 55 50 01 1a ff ff f9  e3 a0 10 01 e5 84 10 00  |.UP.............|
+000000f0: e3 a0 09 01 e2 50 00 01  12 4f f0 0c e3 a0 10 06  |.....P...O......|
+Returned 0
+OpenRG boot>
