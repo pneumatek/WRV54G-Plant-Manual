@@ -151,3 +151,11 @@ The PuTTY session captured at 2026-10-09 20:25:56 shows `rg_conf_print /` return
 An earlier investigation recorded a substantially larger configuration tree. The reason for the difference is unknown. Possible explanations must remain hypotheses until the original captures and command contexts are compared.
 
 Do not infer that configuration was erased, modified, or reset solely from this difference. Preserve both original session logs and investigate their chronology and command context before drawing conclusions.
+
+## Follow-up — Repeatable startup access (2026-10-10)
+
+The operator reported cycling power to both the USB-to-serial adapter and the WRV54G router, then repeatedly entering BOOT MENU mode by pressing ESC at the appropriate point during startup.
+
+The PuTTY capture `WRV54G-2026-10-10-session-120207.log` records the startup banner, RGLoader version 2.4.4, Internal Version 1.2, the BOOT MENU instruction, the `OpenRG boot>` prompt, and the vendor-buffer placeholder message.
+
+The capture supports the observed startup sequence and console access. The repeatability of ESC timing is based on the operator's direct report; this individual log does not show the ESC keypress itself.
