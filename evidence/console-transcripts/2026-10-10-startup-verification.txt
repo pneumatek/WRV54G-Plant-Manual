@@ -1,0 +1,17 @@
+WRV54G Plant Manual & OpenRG Atlas
+Console Transcript — Startup Verification
+
+Source log: WRV54G-2026-10-10-session-120207.log
+Capture timestamp: 2026-10-10 12:02:07
+Capture method: PuTTY session logging
+Source location: D:\WRV54G-Plant-Manual-Evidence\WRV54G-2026-10-10-session-120207.log
+
+NOTE: This file is a readable transcription of the original PuTTY log. The original log remains the primary evidence record.
+
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.10 12:02:07 =~=~=~=~=~=~=~=~=~=~=~=
+Uncompressing Linux......................................... done, booting the kernel.
+
+RGLoader Version: 2.4.4
+Internal Version: 1.2
+Press ESC to enter BOOT MENU mode.
+OpenRG boot> Vendor buffer is <Vendor information which is to be written to the vendor section and read from it later on. Test information only, change it according to your needs>
