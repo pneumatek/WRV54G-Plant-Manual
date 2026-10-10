@@ -41,3 +41,22 @@ This test verifies bounded reads over a small address range only. It does not es
 **Passed:** Small, consecutive, bounded flash reads through the serial bootloader.
 
 **Not yet tested:** Larger read lengths, complete flash acquisition, binary reconstruction, and independent image verification.
+
+## Larger Read-Size Tests
+
+Following the initial four consecutive 64-byte reads, larger bounded reads were tested from address `0x00140000`.
+
+| Requested length | Expected final data-line address | Result |
+|---:|---:|---|
+| `0x100` (256 bytes) | `0x001400F0` | Passed; output matched the four 64-byte reads |
+| `0x400` (1 KiB) | `0x001403F0` | Passed |
+| `0x1000` (4 KiB) | `0x00140FF0` | Passed; no errors or missing address ranges reported |
+| `0x4000` (16 KiB) | `0x00143FF0` | Passed; no errors or missing address ranges reported |
+
+All tests used the read-only command form:
+
+`flash_dump -r <address> -l <length>`
+
+The successful tests establish that the bootloader returned the expected address coverage for these requested lengths. They do not establish the maximum supported read size or verify a complete flash image.
+
+**Status:** Largest tested bounded read is 16 KiB. Full-flash acquisition and binary-image verification remain outstanding.
