@@ -45,6 +45,7 @@ The following commands appeared in the bootloader's `help` output.
 | `rmt_upd_rgloader_wget_close` | Kill a remote upgrade process | Potentially disruptive |
 | `flash_commit` | Save configuration to flash | Persistent write |
 | `restore_default` | Restore defaults; `-d` avoids rebooting afterward | State-changing |
+| `reboot` | Reboot the system | Operational; reboot behavior not independently assessed |
 | `log_lev_on` | Redirect error output at or above a specified severity to the CLI | Diagnostic |
 | `log_lev_off` | Stop error-output redirection | Diagnostic |
 | `cat` | Print file contents on the console | Read-only inspection |
@@ -142,7 +143,7 @@ The help text describes booting the system, with `-g` indicating kernel-debuggin
 - Is there a safe method to transfer a raw flash image to a host computer?
 - What are the exact effects of `bset`, `reconf`, and the remote-upgrade commands?
 - Does the BusyBox shell provide additional read-only inspection tools?
-
+- What does the `Vendor buffer` message represent, and is it related to the flash section named `vendor_log`?
 These questions remain open until tested or supported by reliable technical documentation.
 
 ---
