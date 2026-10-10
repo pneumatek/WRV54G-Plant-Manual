@@ -143,3 +143,11 @@ Determine whether a complete raw flash backup already exists. If not, identify a
 
 ---
 *This entry records the baseline established by the investigation to date. Future entries will document subsequent activities, results, and changes in understanding.*
+
+## Follow-up — Configuration output discrepancy
+
+The PuTTY session captured at 2026-10-09 20:25:56 shows `rg_conf_print /` returning a minimal configuration tree containing `dev(ixp0)` and `system(boot(failure_boots(0)))`.
+
+An earlier investigation recorded a substantially larger configuration tree. The reason for the difference is unknown. Possible explanations must remain hypotheses until the original captures and command contexts are compared.
+
+Do not infer that configuration was erased, modified, or reset solely from this difference. Preserve both original session logs and investigate their chronology and command context before drawing conclusions.
