@@ -1,0 +1,82 @@
+WRV54G Plant Manual & OpenRG Atlas
+Console Transcript — Bootloader Help
+
+Source log: WRV54G-2026-10-09-session-201218.log
+Capture timestamp: 2026-10-09 20:12:18
+Capture method: PuTTY session logging
+Source location: D:\WRV54G-Plant-Manual-Evidence\WRV54G-2026-10-09-session-201218.log
+
+NOTE: This file is a readable transcription of the original PuTTY log. The original log remains the primary evidence record.
+
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.09 20:12:18 =~=~=~=~=~=~=~=~=~=~=~=
+Uncompressing Linux......................................... done, booting the kernel.
+
+RGLoader Version: 2.4.4
+Internal Version: 1.2
+Press ESC to enter BOOT MENU mode.
+OpenRG boot> help
+
+ps:Print main-task tasks
+
+rg_conf_print:rg_conf_print <root> - Print OpenRG configuration
+
+starting from <root> - use / for the whole configuration
+
+rg_conf_set:rg_conf_set <path> <value> - Set rg_conf path to a value
+
+rg_conf_del:rg_conf_del <path> - Del subtree path from rg_conf
+
+reconf:reconf <flash_delay 1(=NOW) to 4> - Reconfigure the
+
+system according to the current rg_conf
+
+entity_close:entity_close <entity ptr> - Close an entity
+
+host:host <name> - Resolve host by name
+
+rmt_upd_rgloader:Remotely upgrade the box
+
+rmt_upd_rgloader_wget_close:Kill a remote upgrade process
+
+flash_commit:Save configuration to flash
+
+restore_default:restore_defaults [-d] - Restore default configuration
+
+(use -d to avoid rebooting after)
+
+reboot:Reboot the system
+
+log_lev_on:log_lev_on <severity> - redirect rg_error output from severity
+
+equal or higher to <sevrerity> to the current cli
+
+log_lev_off:Stop rg_error redirection to the current cli
+
+cat:Print file contents on console
+
+shell:Spawn busybox shell in foreground
+
+flash_layout:Prints the flash layout and content
+
+flash_erase:flash_erase [-d] <section> - erases a given section in the flash
+
+flash_dump:flash_dump [-s <section> | -r <address>] [-l <length>] [-1|2|4] - dumps the flash content
+
+bset:Configure bootloader
+
+ifconfig:Configure network interface
+
+ping:Test network connectivity
+
+boot:boot -g {-s <section> | -r <address>} - Boot the system (-g boot with kgdb)
+
+load:load -u <url> {-s <section> | -r <address>} - Load and burn image
+
+help:Print this menu
+
+Returned 0
+
+OpenRG boot> Vendor buffer is <Vendor information which is to be written to the vendor section and read from it later on. Test information only, change it according to your needs>
+
+
+OpenRG boot>
