@@ -58,7 +58,18 @@ The original logs are evidence records. Transcriptions and analysis belong in th
 - Do not publish credentials or sensitive configuration data.
 - Keep complete third-party PDFs in the local reference library unless redistribution rights have been established. Record their metadata and findings in this repository rather than committing the full documents.
 
-## 5. Next research priorities
+## 5. OpenWrt `jungo-image.py` — Flash Acquisition Reference
+
+- **Source:** [Historical OpenWrt `jungo-image.py`](https://git.wut.ee/qi-hardware/openwrt-xburst/src/commit/65302aa5bc4cebf0a8cbde4cf65418b82ddeb7bf/scripts/flashing/jungo-image.py)
+- **Version:** 0.11
+- **Purpose:** Reference implementation for flash acquisition from supported Jungo-based routers, explicitly including the Linksys WRV54G.
+- **Relevant functionality:** The `image_dump()` routine reads flash in bounded chunks through a Telnet CLI, parses address-prefixed hexadecimal output, and reconstructs binary data.
+- **Applicability:** Not yet validated on the WRV54G under investigation. The utility expects a running router CLI; compatibility with the serial `OpenRG boot>` prompt has not been established.
+- **Safety limitation:** The script also contains firmware-writing functionality. Do not execute it against the router until its execution paths, connection requirements, and flash-size detection have been reviewed.
+- **Status:** Research reference only; acquisition procedure not yet validated.
+
+
+## 6. Next research priorities
 
 1. Inspect the bootloader command documentation and identify any supported read-only flash-export method.
 2. Investigate OpenRG configuration structure and the observed `rg_conf` sections.
