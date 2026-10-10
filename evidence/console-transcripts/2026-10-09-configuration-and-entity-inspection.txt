@@ -1,0 +1,64 @@
+WRV54G Plant Manual & OpenRG Atlas
+Console Transcript — Configuration and Entity Inspection
+
+Source log: WRV54G-2026-10-09-session-202556.log
+Capture timestamp: 2026-10-09 20:25:56
+Capture method: PuTTY session logging
+Source location: D:\WRV54G-Plant-Manual-Evidence\WRV54G-2026-10-09-session-202556.log
+
+NOTE: This file is a readable transcription of the original PuTTY log. The original log remains the primary evidence record.
+
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.09 20:25:56 =~=~=~=~=~=~=~=~=~=~=~=
+Uncompressing Linux......................................... done, booting the kernel.
+
+RGLoader Version: 2.4.4
+Internal Version: 1.2
+Press ESC to enter BOOT MENU mode.
+OpenRG boot> Vendor buffer is <Vendor information which is to be written to the vendor section and read from it later on. Test information only, change it according to your needs>
+
+
+OpenRG boot> rg_conf_print
+
+Wrong number of arguments
+
+rg_conf_print:rg_conf_print <root> - Print OpenRG configuration
+
+starting from <root> - use / for the whole configuration
+
+OpenRG boot> ps
+
+OpenRG PS:
+
+Entities:
+
+eid=0x400000c8type=ENT_CLIt=0x1900009cent_status=0next=0x400000b4
+
+eid=0x400000b4type=ENT_ROUTEt=0x0ent_status=40004088next=0x400000a0
+
+eid=0x400000a0type=ENT_ERESOLVt=0x0ent_status=0next=0x4000008c
+
+eid=0x4000008ctype=ENT_TIMEt=0x0ent_status=0next=0x0
+
+Returned 0
+
+OpenRG boot> rg_conf_print /
+
+(rg_conf
+
+  (dev(ixp0))
+
+  (system
+
+    (boot
+
+      (failure_boots(0))
+
+    )
+
+  )
+
+)
+
+Returned 0
+
+OpenRG boot>
